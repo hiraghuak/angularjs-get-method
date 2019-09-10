@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Marrow Doctor Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- ANGULAR JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <!-- GOOGLE FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+        <!-- MAIN STYLE  -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- font-awsome -->
+        <script src="https://kit.fontawesome.com/df246eb8e7.js"></script>
+
+    </head>
+
+    <body ng-app="marrowApp" ng-controller="marrowCtrl">
+        <!-- TOP SECTION START -->
+        <div class="top_with_color_bg">
+            <div class="plan_id">
+                <span>{{marrowData.plan_id}}</span>
+            </div>
+            <div class="container">
+                <div class="dr_photo">
+                    <img src="{{marrowData.img}}" alt="{{marrowData.name}}" class="img-fluid mx-auto d-block">
+                    <h3>{{marrowData.name}}</h3>
+                    <p>{{marrowData.subject}}</p>
+                </div>
+            </div>
+            <div class="dr_desc_main">
+                <div class="dr_desc">
+                    <p>{{marrowData.bio}}</p>
+                </div>
+            </div>
+        </div>
+        <!-- TOP SECTION END -->
+        <!-- BOTTOM BODY SECTION START -->
+        <div class="bottom_with_gry_bg">
+            <div class="container">
+                <div class="cust_with">
+                    <div class="access_details">
+                        <h2>Get full access of Sakshi Arora rewarded Obstertice Gynacology classess in Marrow</h2>
+                        <ul>
+                            <li> <i class="fas fa-check"></i> {{marrowData.pos_1_sub[0]}}</li>
+                            <li> <i class="fas fa-check"></i> {{marrowData.pos_1_sub[1]}}</li>
+                        </ul>
+                    </div>
+                    <form action="" class="apply_form">
+                        <div class="apply_code">
+                            <h2>Apply your coupon code and get free access to OBG videos</h2>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="input_code" id=""
+                                    placeholder="Enter coupon code">
+                            </div>
+                        </div>
+                        <div class="reC">
+                        </div>
+                        <button type="submit" class="btn btn-block btn-primary" id="apply_code_btn"> Apply </button>
+                    </form>
+                    <div class="instructions">
+                        <h2>Instructions</h2>
+                        <ul>
+                            <li>Applicable only on Plan B and Plan C purchases</li>
+                            <li>A Plan B extension code can extend Plan C and vice versa. No restrictions.</li>
+                            <li>Your friend should mandatorily apply the code at the time of purchase.</li>
+                        </ul>
+                    </div>
+                    <div class="mailto">
+                        <p>If you have any query please mail us at <a
+                                href="mailto:support@marrowmed.com">support@marrowmed.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BOTTOM BODY SECTION END -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
